@@ -1,15 +1,16 @@
 # == Schema Information
 #
-# Table name: episodes
+# Table name: appearances
 #
 #  id         :integer          not null, primary key
-#  date       :date
-#  number     :integer
+#  episode_id :integer
+#  guest_id   :integer
+#  rating     :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
-class Episode < ApplicationRecord
-  has_many :guests
-  belongs_to :appearance
+class Appearance < ApplicationRecord
+  has_one :episode
+  has_one :guest
 end
