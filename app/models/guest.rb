@@ -7,10 +7,9 @@
 #  occupation :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  episode_id :integer
 #
 
 class Guest < ApplicationRecord
-  belongs_to :episode
-  belongs_to :appearance
+  has_many :appearances
+  has_many :episodes, through: :appearances
 end

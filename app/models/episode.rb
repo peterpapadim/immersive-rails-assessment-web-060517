@@ -10,6 +10,6 @@
 #
 
 class Episode < ApplicationRecord
-  has_many :guests
-  belongs_to :appearance
+  has_many :appearances
+  has_many :guests, through: :appearances
 end

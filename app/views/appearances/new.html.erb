@@ -1,6 +1,7 @@
 <h3>Create New Appearence</h3>
-<%= form_tag('/appearances') do %>
+<%= form_tag(appearances_path) do %>
     Episode Number: <%= text_field_tag :episode %><br>
     Guest: <%= text_field_tag :guest %><br>
+    Rating: <%= text_field_tag :rating %><br>
     <%= submit_tag "Create Appearance" %><br>
 <% end %>
